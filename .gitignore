@@ -2,6 +2,9 @@
 linux-5.15.77/*
 !linux-5.15.77/
 
+# Except linux-5.15.77/Makefile
+!linux-5.15.77/Makefile
+
 # Except linux-5.15.77/arch/x86/entry/syscalls/syscall_63.tbl
 linux-5.15.77/arch/*
 !linux-5.15.77/arch/
