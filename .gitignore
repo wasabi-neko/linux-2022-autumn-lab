@@ -28,3 +28,6 @@ linux-5.15.77/include/linux/*
 
 # Ignore tmp file
 tmp/
+
+# else
+.vscode
