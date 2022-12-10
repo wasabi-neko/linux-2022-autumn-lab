@@ -10,10 +10,13 @@
 
 int global = 1;
 
+void foo() {
+    printf("foo!");
+}
+
 int main()
 {
     int a = 10;
-    int b = 10;
 
     long retval;
     unsigned long *vaddr = (unsigned long *) malloc(sizeof(unsigned long));
@@ -25,24 +28,25 @@ int main()
     *vaddr = (unsigned long) &a;
     retval = syscall(450, vaddr, 1, paddr);
     printf("%ld\n", retval);
-    printf("vaddr: %014lx\npaddr: %014lx\n", *vaddr, *paddr);
-
-    *vaddr = (unsigned long) &b;
-    retval = syscall(450, vaddr, 1, paddr);
-    printf("%ld\n", retval);
-    printf("vaddr: %014lx\npaddr: %014lx\n", *vaddr, *paddr);
+    printf("stack: vaddr: %014lx\npaddr: %014lx\n", *vaddr, *paddr);
 
     *vaddr = (unsigned long) &global;
     retval = syscall(450, vaddr, 1, paddr);
     printf("%ld\n", retval);
-    printf("vaddr: %014lx\npaddr: %014lx\n", *vaddr, *paddr);
+    printf("data: vaddr: %014lx\npaddr: %014lx\n", *vaddr, *paddr);
     
     int *heap = (int*) malloc(sizeof(unsigned long));
     *vaddr = (unsigned long) heap;
     retval = syscall(450, vaddr, 1, paddr);
     printf("%ld\n", retval);
-    printf("vaddr: %014lx\npaddr: %014lx\n", *vaddr, *paddr);
+    printf("heap: vaddr: %014lx\npaddr: %014lx\n", *vaddr, *paddr);
     free(heap);
+
+
+    *vaddr = (unsigned long) foo;
+    retval = syscall(450, vaddr, 1, paddr);
+    printf("%ld\n", retval);
+    printf("foo: vaddr: %014lx\npaddr: %014lx\n", *vaddr, *paddr);
 
     return 0;
 }
