@@ -2,26 +2,29 @@
 linux-5.15.77/*
 !linux-5.15.77/
 
+# Except linux-5.15.77/hello
+!linux-5.15.77/hello
+
 # Except linux-5.15.77/Makefile
 !linux-5.15.77/Makefile
 
 # Except linux-5.15.77/arch/x86/entry/syscalls/syscall_63.tbl
-linux-5.15.77/arch/*
 !linux-5.15.77/arch/
-linux-5.15.77/arch/x86/*
+linux-5.15.77/arch/*
 !linux-5.15.77/arch/x86/
-linux-5.15.77/arch/x86/entry/*
+linux-5.15.77/arch/x86/*
 !linux-5.15.77/arch/x86/entry/
-linux-5.15.77/arch/x86/entry/syscalls/*
+linux-5.15.77/arch/x86/entry/*
 !linux-5.15.77/arch/x86/entry/syscalls/
+linux-5.15.77/arch/x86/entry/syscalls/*
 !linux-5.15.77/arch/x86/entry/syscalls/syscall_64.tbl
 
 # Except linux-5.15.77/inlcde/linux/syscalls.h
-linux-5.15.77/inlucde/*
-!linux-5.15.77/inlucde/
-linux-5.15.77/inlucde/linux/*
-!linux-5.15.77/inlucde/linux/
-!linux-5.15.77/inlucde/linux/syscalls.h
+!linux-5.15.77/include/
+linux-5.15.77/include/*
+!linux-5.15.77/include/linux/
+linux-5.15.77/include/linux/*
+!linux-5.15.77/include/linux/syscalls.h
 
 # Ignore tmp file
 tmp/
