@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include "my_syscall.h"
 #include "get_layout.h"
 
@@ -31,5 +33,6 @@ int main()
 
     free(var);
     free(phy_var);
+    sleep(100);
     return 0;
 }

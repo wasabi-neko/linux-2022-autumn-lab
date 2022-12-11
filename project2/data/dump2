@@ -1,0 +1,34 @@
+░▒▓  ╱  ~/Documents/NCU/2022-autumn/linux/project/linux-2022-autumn-lab/project2 ╱ on   main ⇡1 !1 ────────────────────────────────────────────────────────── at 20:23:05  ▓▒░─╮
+❯ ./main.out                                                                                                                                                                         ─╯
+----- virtual address: ----------
+code:  0x0055ccd3937301
+bss:   0x0055ccd393a020
+data:  0x0055ccd393a010
+stack: 0x007ffec9894027
+lib:   0x007ff4164ac420
+------------------------------
+----- physical address: ----------
+code:  0x000000005f0301
+bss:   0x000000005cf020
+data:  0x000000005cf010
+stack: 0x0000000043a027
+lib:   0x00000000000420
+------------------------------
+
+░▒▓  ╱  ~/Documents/NCU/2022-autumn/linux/project/linux-2022-autumn-lab/project2 ╱ on   main ⇡1 !1 ────────────────────────────────────────────────────────── at 20:23:04  ▓▒░─╮
+❯ ./main.out                                                                                                                                                                         ─╯
+----- virtual address: ----------
+code:  0x00559167852301
+bss:   0x00559167855020
+data:  0x00559167855010
+stack: 0x007ffe6bb42d77
+lib:   0x007fcd43405420
+------------------------------
+----- physical address: ----------
+code:  0x000000005f0301
+bss:   0x000000005db020
+data:  0x000000005db010
+stack: 0x000000005fcd77
+lib:   0x00000000000420
+------------------------------
+
