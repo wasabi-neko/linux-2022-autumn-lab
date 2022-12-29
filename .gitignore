@@ -26,6 +26,22 @@ linux-5.15.77/include/*
 linux-5.15.77/include/linux/*
 !linux-5.15.77/include/linux/syscalls.h
 
+# Except linux/linux/sched.h
+linux-5.15.77/include/*
+!linux-5.15.77/include/
+linux-5.15.77/include/linux/*
+!linux-5.15.77/include/linux/
+!linux-5.15.77/include/linux/sched.h
+
+# Except arch/x86/kernel/process_64.c
+linux-5.15.77/arch/*
+!linux-5.15.77/arch/
+linux-5.15.77/arch/x86/*
+!linux-5.15.77/arch/x86/
+linux-5.15.77/arch/x86/kernel/*
+!linux-5.15.77/arch/x86/kernel/
+!linux-5.15.77/arch/x86/kernel/process_64.c
+
 # Ignore tmp file
 tmp/
 
