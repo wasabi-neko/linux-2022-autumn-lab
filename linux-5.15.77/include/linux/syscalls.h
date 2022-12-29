@@ -1385,4 +1385,6 @@ int __sys_setsockopt(int fd, int level, int optname, char __user *optval,
 asmlinkage long sys_hello_world(int a);
 asmlinkage long sys_my_virt_phy(unsigned long __user *user_vaddrs, size_t len_vaddr, unsigned long __user *result);
 asmlinkage long sys_get_CPU_number(void);
+asmlinkage long sys_start_cnt_process_switch(void);
+asmlinkage long sys_stop_cnt_process_switch(void);
 #endif

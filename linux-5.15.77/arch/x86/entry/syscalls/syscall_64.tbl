@@ -373,6 +373,9 @@
 449 common  hello_world         sys_hello_world
 450 common  my_virt_phy            sys_my_virt_phy
 451 common  get_CPU_number      sys_get_CPU_number 
+452 common  start_cnt_process_switch    sys_start_cnt_process_switch
+453 common  stop_cnt_process_switch     sys_stop_cnt_process_switch
+
 
 #
 # Due to a historical design error, certain syscalls are numbered differently

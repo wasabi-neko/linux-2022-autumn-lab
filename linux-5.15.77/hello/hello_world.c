@@ -89,3 +89,16 @@ SYSCALL_DEFINE0(get_CPU_number)
 {
     return current->cpu;
 }
+
+SYSCALL_DEFINE0(start_cnt_process_switch)
+{
+    current->switch_cnt_switch = 1;
+    current->switch_cnt = 0;
+    return 0;
+}
+
+SYSCALL_DEFINE0(stop_cnt_process_switch)
+{
+    current->switch_cnt_switch = 0;
+    return current->switch_cnt;
+}
