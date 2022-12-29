@@ -57,6 +57,7 @@ inline unsigned long virt2phy_inline(struct mm_struct *mm, unsigned long vaddr)
     return (pfn & PAGE_MASK) | (vaddr & ~PAGE_MASK);
 }
 
+// asmlinkage hello_world(int a) {}
 SYSCALL_DEFINE1(hello_world, int, a)
 {
     printk("Hello World! %d\n", a);
@@ -64,6 +65,7 @@ SYSCALL_DEFINE1(hello_world, int, a)
 }
 
 
+// asmlinkage long my_virt_pjy(unsigned long __user *user_vaddrs, size_t len_vaddr, unsigned long __user * result) {}
 SYSCALL_DEFINE3(my_virt_phy, unsigned long __user *, user_vaddrs, size_t , len_vaddr, unsigned long __user *, result)
 {
     unsigned long *vaddr = kmalloc(sizeof(unsigned long) * len_vaddr, GFP_KERNEL);
@@ -80,4 +82,10 @@ SYSCALL_DEFINE3(my_virt_phy, unsigned long __user *, user_vaddrs, size_t , len_v
     copy_to_user(result, paddr, len_vaddr* sizeof(unsigned long));
 
     return 0;
+}
+
+
+SYSCALL_DEFINE0(get_CPU_number)
+{
+    return current->cpu;
 }
