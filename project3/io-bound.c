@@ -17,8 +17,9 @@ int main()
 
     syscall(SYS_N_START);
 
-    for (int i = 0; i < 200000; i++) {
+    for (int i = 0; i < 1000000; i++) {
         printf("%d", b++);
+        fflush(stdout);
         nanosleep(&ts, &ts);
     }
 
